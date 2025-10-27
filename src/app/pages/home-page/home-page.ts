@@ -1,15 +1,19 @@
 import { Component, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'app-root',
-  imports: [RouterOutlet, FormsModule],
-  standalone: true,
-  templateUrl: './app.html',
-  styleUrl: './app.scss'
+  selector: 'app-home-page',
+  imports: [FormsModule],
+  templateUrl: './home-page.html',
+  styleUrl: './home-page.scss',
 })
-export class App {
+export class HomePage {
+  titlealt : string = 'Home Page';
+
+  changeTitle(){
+    this.titlealt = 'Title Changed!';
+  }
+
   protected readonly title = signal('my_mahir_angular');
   public myName: String;
   textInput: String;

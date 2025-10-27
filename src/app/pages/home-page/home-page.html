@@ -1,0 +1,15 @@
+<h2>{{titlealt}}</h2>
+
+<main class="main">
+  <div class="container">
+    <h1>Hello {{myName}} !!</h1>
+    <input [(ngModel)]="textInput" type="text" placeholder="Enter Your Name">
+    <button (click)="changeName()">Cuba Tekan</button>
+  </div>
+  <br/>
+  <button (click)="btnClick()">Trigger Function</button>
+
+  <div style="margin-top: 1em;">
+    <button (click)="btnArray()">Trigger Array Function</button>
+  </div>
+</main>
