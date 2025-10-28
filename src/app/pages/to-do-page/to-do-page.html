@@ -1,0 +1,31 @@
+<div class="todo-body">
+    <div class="todo-container">
+      <div class="header-container">
+       <span>TO-DO LIST</span>
+       
+        <section>
+            <div class="example-label"></div>
+                <div class="example-button-row">
+                    <button matButton="elevated" (click)="onAdd()">Add New</button>
+                    <!-- <button matButton="elevated" disabled>Disabled</button> -->
+                </div>
+        </section>
+
+        <div class="list-container">
+            <mat-selection-list #lists>
+                @for (todo of todoList; track todo) {
+                    <mat-list-option>{{ todo.task }}</mat-list-option>
+
+                    <!-- <button mat-button class="delete" (click)="onDelete()">
+                        <mat-icon>delete</mat-icon>
+                    </button> -->
+                }
+            </mat-selection-list>
+
+        </div>
+
+        <div class="list-container"></div>
+      </div>
+    </div>
+  </div>
+

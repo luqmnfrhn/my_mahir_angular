@@ -1,9 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+
 
 @Component({
   selector: 'app-calculator-page',
-  imports: [ReactiveFormsModule],
+  imports: [
+    ReactiveFormsModule,
+    MatSlideToggleModule],
   standalone: true,
   templateUrl: './calculator-page.html',
   styleUrls: ['./calculator-page.scss'],

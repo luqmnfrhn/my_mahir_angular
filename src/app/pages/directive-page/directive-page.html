@@ -1,0 +1,43 @@
+<div class="padding">
+    <h2>Directive Page</h2>
+
+<mat-slide-toggle (change)="onToggleChange()">
+    Show Car List
+</mat-slide-toggle>    
+
+@if (showListCar) {
+    <div class="container">
+    @for (car of cars; track car.brand) {
+        @if (car.brand != "BMW") {
+            <mat-card [ngClass]="car.brand == 'Toyota' ? 'example-card': 'example-card-dark'" appearance="outlined">
+                <mat-card-header>
+                    <mat-card-title>{{ car.brand }}</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                    <p>{{ car.year }}</p>
+                </mat-card-content>
+                <mat-card-footer class="example-card-footer">
+                    <mat-chip-set aria-label="Chihuahua traits">
+                    <mat-chip>{{ car.price}}</mat-chip>
+                    <mat-chip>{{ car.type}}</mat-chip>
+                    @switch (car.origin){
+                        @case ("Japan") {
+                            <mat-chip>Japan Product</mat-chip>
+                        }
+                        @case ("Germany") {
+                            <mat-chip>Germany Product</mat-chip>
+                        }
+                        @case ("Sweden") {
+                            <mat-chip>Sweden Product</mat-chip>
+                        }
+                    }
+                    </mat-chip-set>
+                </mat-card-footer>
+            </mat-card>
+        }
+    }
+</div>
+}
+
+
+</div>

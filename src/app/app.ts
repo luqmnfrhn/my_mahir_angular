@@ -1,10 +1,11 @@
 import { Component, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
+import { Toolbar } from "./components/toolbar/toolbar";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, FormsModule],
+  imports: [RouterOutlet, FormsModule, Toolbar],
   standalone: true,
   templateUrl: './app.html',
   styleUrl: './app.scss'
