@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SharedModules } from '../../shared/shared-modules';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
 import { Title } from '@angular/platform-browser';
 
@@ -12,7 +12,8 @@ import { Title } from '@angular/platform-browser';
 })
 export class AddDialog implements OnInit{
 
-  public todoForm: any;
+  // public todoForm: any;
+  todoForm!: FormGroup;
 
   constructor(
     private formBuilder: FormBuilder,

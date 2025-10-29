@@ -1,31 +1,61 @@
 <div class="todo-body">
     <div class="todo-container">
       <div class="header-container">
-       <span>TO-DO LIST</span>
+       <h1>TO-DO LIST</h1>
+
+       <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
+            <label for="task" class="form-label">Task to complete</label>
+            <input type="text" ngModel name="newTask" placeholder="Enter Your Task Here" class="form-control" id="task"
+            aria-describedby="task" required>
+
+            <div *ngIf="myForm.controls['newTask']?.invalid && myForm.controls['newTask']?.touched">
+              <small class="text-danger">Task is required</small>
+            </div>
+            <div class="example-button-row">
+                <button mat-button="elevated" type="submit" [disabled]="myForm.invalid">Submit</button>
+            </div>
+       </form>
        
         <section>
             <div class="example-label"></div>
                 <div class="example-button-row">
                     <button matButton="elevated" (click)="onAdd()">Add New</button>
-                    <!-- <button matButton="elevated" disabled>Disabled</button> -->
+                    <button matButton="elevated" (click)="onClear()">Clear</button>
                 </div>
         </section>
-
+        </div>
         <div class="list-container">
             <mat-selection-list #lists>
                 @for (todo of todoList; track todo) {
                     <mat-list-option>{{ todo.task }}</mat-list-option>
 
-                    <!-- <button mat-button class="delete" (click)="onDelete()">
+                    <button mat-button class="delete" (click)="onDelete(todoList.indexOf(todo))">
                         <mat-icon>delete</mat-icon>
-                    </button> -->
+                    </button>
                 }
             </mat-selection-list>
 
         </div>
 
-        <div class="list-container"></div>
-      </div>
+        <div class="list-container">
+            <mat-list>
+                @for (todo of todoList; track $index){
+                    <mat-list-item>
+                        <div class="todo-item">
+                            <button mat-icon-button (click)="onSelected($index)">
+                                <mat-icon color="primary">
+                                    {{todo.completed ? 'check_box' : 'check_box_outline_blank'}}
+                                </mat-icon> 
+                            </button>
+
+                            <span [class.completed]="todo.completed">{{ todo.task }}</span>
+                        </div>
+                    </mat-list-item>
+                } 
+            </mat-list>
+
+        </div>
+      
     </div>
   </div>
 

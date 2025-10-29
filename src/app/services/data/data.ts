@@ -22,6 +22,12 @@ export class Data {
     }
   }
 
+  setLocalStorageAlt(key: string, value: any){
+    if(this.isBrowser){
+      localStorage.setItem(key, JSON.stringify(value));
+    }
+  }
+
   getLocalStorage(key:string): any{
     if(this.isBrowser){
       const item = localStorage.getItem(key);
