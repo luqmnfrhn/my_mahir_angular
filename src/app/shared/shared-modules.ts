@@ -10,6 +10,7 @@ import { CommonModule } from "@angular/common";
 import { MatSlideToggleModule } from "@angular/material/slide-toggle";
 import { MatListModule } from "@angular/material/list";
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatTableModule } from "@angular/material/table";
 
 export const SharedModules = [
     MatToolbarModule,
@@ -28,4 +29,5 @@ export const SharedModules = [
     MatDialogActions,
     MatDialogContent,
     MatDialogTitle,
+    MatTableModule
 ]

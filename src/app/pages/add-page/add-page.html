@@ -1,0 +1,55 @@
+<div class="add-student-container">
+  <h1 class="title">Add New Student</h1>
+
+  <form [formGroup]="studentForm" class="form" (ngSubmit)="saveStudent()" >
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input
+        type="text"
+        id="name"
+        formControlName="name"
+        placeholder="Enter full name"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="student_no">Student No</label>
+      <input
+        type="text"
+        id="student_no"
+        formControlName="student_no"
+        placeholder="Enter student number"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input
+        type="email"
+        id="email"
+        formControlName="email"
+        placeholder="Enter email address"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="phone">Phone</label>
+      <input
+        type="tel"
+        id="phone"
+        formControlName="phone"
+        placeholder="Enter phone number"
+      />
+    </div>
+
+    <div class="button-group">
+      <button type="submit" class="btn save-btn" [disabled]="studentForm.invalid">
+        💾 Save
+      </button>
+      <a routerLink="/student" class="btn back-btn">← Back</a>
+    </div>
+  </form>
+</div>

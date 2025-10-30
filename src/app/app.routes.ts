@@ -4,6 +4,9 @@ import { AboutPage } from './pages/about-page/about-page';
 import { CalculatorPage } from './pages/calculator-page/calculator-page';
 import { DirectivePage } from './pages/directive-page/directive-page';
 import { ToDoPage } from './pages/to-do-page/to-do-page';
+import { StudentPage } from './pages/student-page/student-page';
+import { DetailPage } from './pages/detail-page/detail-page';
+import { AddPage } from './pages/add-page/add-page';
 
 export const routes: Routes = [
     {
@@ -25,6 +28,18 @@ export const routes: Routes = [
     {
         path: 'to-do',
         component: ToDoPage
+    },
+    {
+        path: 'student',
+        component: StudentPage
+    },
+    {
+        path: 'detail/:id',
+        component: DetailPage
+    },
+    {
+        path: 'add',
+        component: AddPage
     }
 
 ];

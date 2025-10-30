@@ -1,0 +1,33 @@
+<div class="detail-container">
+  <h1 class="title">Student Details</h1>
+
+  <div class="card" >
+    <div class="info-row">
+      <span class="label">Name:</span>
+      <span class="value">{{ student?.name }}</span>
+    </div>
+
+    <div class="info-row">
+      <span class="label">Student No:</span>
+      <span class="value">{{ student?.studentno }}</span>
+    </div>
+
+    <div class="info-row">
+      <span class="label">Email:</span>
+      <span class="value">{{ student?.email }}</span>
+    </div>
+
+    <div class="info-row">
+      <span class="label">Phone:</span>
+      <span class="value">{{ student?.phone }}</span>
+    </div>
+  </div>
+
+  <div *ngIf="!student">
+    <p class="loading-text">Loading student details...</p>
+  </div>
+
+  <button mat-button routerLink="/student"> Back </button>
+
+  <a routerLink="/student" class="back-button">← Back to List</a>
+</div>
