@@ -7,6 +7,7 @@ import { ToDoPage } from './pages/to-do-page/to-do-page';
 import { StudentPage } from './pages/student-page/student-page';
 import { DetailPage } from './pages/detail-page/detail-page';
 import { AddPage } from './pages/add-page/add-page';
+import { LoginPage } from './pages/login-page/login-page';
 
 export const routes: Routes = [
     {
@@ -40,6 +41,10 @@ export const routes: Routes = [
     {
         path: 'add',
         component: AddPage
+    },
+    {
+        path: 'login',
+        component: LoginPage
     }
 
 ];

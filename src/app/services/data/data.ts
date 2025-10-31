@@ -40,4 +40,9 @@ export class Data {
   clearStorage(){
     return localStorage.clear();
   }
+
+  //logout by delete token
+  deleteStorage(key: string){
+    return localStorage.removeItem(key);
+  }
 }

@@ -1,5 +1,7 @@
 <div class="button-container">
     <button mat-raised-button color="primary" routerLink="/add">Add Student</button>
+
+    <button mat-raised-button color="warn" (click)="onLogout()">Logout</button>
 </div>
 
 <table mat-table [dataSource]="dataSource">
