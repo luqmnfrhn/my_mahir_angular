@@ -7,7 +7,8 @@ import { Data } from './data/data';
 })
 export class Api {
   // Take from backend url
-  public baseURL = 'http://localhost:3000/api';
+  // public baseURL = 'http://localhost:3000/api';
+  public baseURL = 'https://myexpressokt25-production.up.railway.app/api'
 
   constructor(
     public httpClient: HttpClient,
@@ -59,6 +60,10 @@ export class Api {
     // }
 
     return new Promise((resolve, reject) =>{
+      console.log('Posting to:', fullURL);
+      console.log('Payload:', payload);
+      console.log('Headers:', headers);
+
       this.httpClient.post(fullURL, payload, headers)
       .subscribe({
         next: (response: any) =>{

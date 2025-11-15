@@ -8,6 +8,7 @@ import { StudentPage } from './pages/student-page/student-page';
 import { DetailPage } from './pages/detail-page/detail-page';
 import { AddPage } from './pages/add-page/add-page';
 import { LoginPage } from './pages/login-page/login-page';
+import { authGuard } from './guards/auth-guard';
 
 export const routes: Routes = [
     {
@@ -28,19 +29,23 @@ export const routes: Routes = [
     },
     {
         path: 'to-do',
-        component: ToDoPage
+        component: ToDoPage,
+        canActivate: [authGuard]
     },
     {
         path: 'student',
-        component: StudentPage
+        component: StudentPage,
+        canActivate: [authGuard]
     },
     {
         path: 'detail/:id',
-        component: DetailPage
+        component: DetailPage,
+        canActivate: [authGuard]
     },
     {
         path: 'add',
-        component: AddPage
+        component: AddPage,
+        canActivate: [authGuard]
     },
     {
         path: 'login',
