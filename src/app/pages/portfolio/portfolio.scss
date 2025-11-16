@@ -1,0 +1,23 @@
+@media (min-width: 992px) {
+  .rounded-lg-3 { border-radius: .3rem; }
+}
+
+.hero {
+  height: 90vh;
+  //background: url('/assets/byd-logo.png') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+//   color: black;
+  @media (min-width: 768px) {
+    font-size: 4rem;
+  }
+}
+
+.hero p {
+  font-size: 1.2rem;
+}

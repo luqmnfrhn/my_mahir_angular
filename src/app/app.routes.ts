@@ -9,6 +9,7 @@ import { DetailPage } from './pages/detail-page/detail-page';
 import { AddPage } from './pages/add-page/add-page';
 import { LoginPage } from './pages/login-page/login-page';
 import { authGuard } from './guards/auth-guard';
+import { Portfolio } from './pages/portfolio/portfolio';
 
 export const routes: Routes = [
     {
@@ -50,6 +51,10 @@ export const routes: Routes = [
     {
         path: 'login',
         component: LoginPage
+    },
+    {
+        path: 'portfolio',
+        component: Portfolio
     }
 
 ];

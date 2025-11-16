@@ -1,4 +1,4 @@
-<mat-toolbar>
+<!-- <mat-toolbar>
   <button matIconButton class="example-icon" aria-label="Example icon-button with menu icon">
     <mat-icon>menu</mat-icon>
   </button>
@@ -14,4 +14,39 @@
   <button matIconButton class="example-icon" aria-label="Example icon-button with share icon">
     <mat-icon>share</mat-icon>
   </button>
-</mat-toolbar>
+</mat-toolbar> -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+
+    <!-- Brand -->
+    <a class="navbar-brand" href="#">Luqman Portfolio</a>
+
+    <!-- Toggle button for mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar Links -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+
+        <li class="nav-item">
+          <a routerLink="/" class="nav-link">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a routerLink="/calculator" class="nav-link">Calculator</a>
+        </li>
+
+        <li class="nav-item">
+          <a routerLink="/to-do" class="nav-link">To-Do</a>
+        </li>
+
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
