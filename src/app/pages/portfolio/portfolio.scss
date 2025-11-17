@@ -21,3 +21,55 @@
 .hero p {
   font-size: 1.2rem;
 }
+
+.hero-section {
+  position: relative;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(135deg, #4f46e5, #9333ea, #ec4899);
+  background-size: 200% 200%;
+  animation: gradientMove 8s ease infinite;
+}
+
+/* Stripe-like animated gradient */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Soft overlay like Stripe */
+.overlay {
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(90px);
+  background: rgba(255, 255, 255, 0.05);
+  z-index: 1;
+}
+
+/* Content stays above overlay */
+.hero-content {
+  z-index: 2;
+  max-width: 900px;
+}
+
+/* Animated rotating text */
+.animated-text span {
+  position: center;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.animated-text {
+  position: relative;
+  display: inline-block;
+  height: 1em;
+}
+
+.animated-text span.active {
+  opacity: 1;
+}
+

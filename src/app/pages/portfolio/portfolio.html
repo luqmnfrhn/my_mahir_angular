@@ -27,6 +27,31 @@
   </div>
 </section>
 
+<section class="hero-section d-flex align-items-center">
+  <div class="overlay"></div>
+
+  <div class="container text-center text-black hero-content">
+    <h1 class="display-4 fw-bold mb-4">
+      Welcome To My&nbsp;
+      <span class="animated-text">
+        <span *ngFor="let text of texts; let i = index"
+              [class.active]="i === currentIndex">
+          {{ text }}
+        </span>
+      </span>
+    </h1>
+
+    <p class="lead mb-4">
+      Build modern, powerful apps with Angular + Bootstrap.
+    </p>
+
+    <button class="btn btn-primary btn-lg px-4">
+      Get Started
+    </button>
+  </div>
+</section>
+
+
 
 
 <h3>
