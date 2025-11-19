@@ -1,9 +1,10 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { SharedModules } from '../../shared/shared-modules';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-portfolio',
-  imports: [...SharedModules],
+  imports: [...SharedModules, RouterLink],
   templateUrl: './portfolio.html',
   styleUrl: './portfolio.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

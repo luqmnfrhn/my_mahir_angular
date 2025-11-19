@@ -10,6 +10,7 @@ import { AddPage } from './pages/add-page/add-page';
 import { LoginPage } from './pages/login-page/login-page';
 import { authGuard } from './guards/auth-guard';
 import { Portfolio } from './pages/portfolio/portfolio';
+import { TimerPage } from './pages/timer-page/timer-page';
 
 export const routes: Routes = [
     {
@@ -55,6 +56,10 @@ export const routes: Routes = [
     {
         path: 'portfolio',
         component: Portfolio
+    },
+    {
+        path: 'timer',
+        component: TimerPage
     }
 
 ];

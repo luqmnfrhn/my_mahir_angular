@@ -1,0 +1,21 @@
+<p>timer-page works!</p>
+<!-- Signal is functions, need parathesis when reading them -->
+
+<section 
+    [class.warn]="secondsRemaining() <= warnAt"
+    [class.danger]="secondsRemaining() <= dangerAt">
+    
+    <div class="timer">
+        <span class="label">Your Session Expires In:</span>
+        <span class="value">
+            {{ formattedRemaining()}}
+        </span>
+    </div>
+
+    <div class="progress">
+        <div 
+            class="bar"
+            [style.width.%]="(secondsRemaining() / total) * 100">
+        </div>
+    </div>
+</section>
