@@ -15,7 +15,12 @@
     <div class="progress">
         <div 
             class="bar"
-            [style.width.%]="(secondsRemaining() / total) * 100">
+            [style.width.%]="(secondsRemaining() / total()) * 100">
         </div>
+    </div>
+
+    <div class="actions">
+        <button (click)="refresh()">Refresh</button>
+        <button (click)="setTimer()">Set Timer</button>
     </div>
 </section>
